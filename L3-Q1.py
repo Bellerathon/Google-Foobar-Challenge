@@ -1,4 +1,4 @@
-# foobar:~/fuel-injection-perfection worm2031$ cat readme.txt 
+# foobar:~/fuel-injection-perfection cat readme.txt 
 # Fuel Injection Perfection
 # =========================
 
@@ -74,62 +74,48 @@
 # Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. 
 # If your solution passes the test cases, it will be removed from your home folder.
 
-
-# =============================== SOLUTION =======================================
-
-#def solution(n):
-    # n = int(n)
-    # max_n = n
-    # answer = [i + 1 for i in range(2 * max_n)]
-    # queue = [i + 1 for i in range(n)]
-    # answer[n] = 0
-    # while queue:
-    #     n = queue[-1]
-    #     print(n)
-    #     if n == 1:
-    #         break
-    #     queue.pop()
-    #     if n + 1 < 2 * max_n and answer[n] + 1 < answer[n + 1]:
-    #         print("adding")
-    #         answer[n + 1] = answer[n] + 1
-    #         queue.append(n + 1)
-    #     elif n - 1 > 0 and answer[n] + 1 < answer[n - 1]:
-    #         print("subbing")
-    #         answer[n - 1] = answer[n] + 1
-    #         queue.append(n - 1)
-    #     elif n % 2 == 0 and answer[n] + 1 < answer[int(n/2)]:
-    #         print("even")
-    #         answer[int(n/2)] = answer[n] + 1
-    #         queue.append(int(n/2))
-    #     print("length = ", len(queue))
-    # print("ANSWER ========", answer)
-    # return answer[1]
-
-    # ===========================================================
-
-    # count = 0
-    # n = int(n)
-    # while n > 1:
-    #     if n % 2 == 0:             # bitmask: *0
-    #         n = n // 2
-    #     elif n == 3 or n % 4 == 1: # bitmask: 01
-    #         n = n - 1
-    #     else:                      # bitmask: 11
-    #         n = n + 1
-    #     count += 1
-    # return count
-
-    # ===========================================================
-
 def solution(n):
     n = int(n)
-    if (n == 1):
-        return 0
-    elif (n % 2 == 0):
-        return 1 + solution(n / 2)
-    else:
-        return 1 + min(solution(n - 1),
-    solution(n + 1))
+    count = 0
+    num = 0
+    step_list = []
+    if n == 1:
+      return 0
+      while num != 1:
+        if count == 0:
+          num = n
+          if num % 2 != 0:
+            num = find_min_cost(num)
+            count += 1
+            step_list.append(num)
+            continue
+          num /= 2
+          num = int(num)
+          step_list.append(num)
+          count += 1
+
+    return count
+
+def find_min_cost(num):
+     add_count = calc(num + 1)
+     sub_count = calc(num - 1)
+     if add_count < sub_count:
+         return num + 1
+     return num - 1
+
+def calc(num):
+     count = 0
+     while num != 1:
+         count += 1
+         if num % 2 != 0:
+             num = find_min_cost(num)
+             count += 1
+             continue
+         num /= 2
+         num = int(num)
+
+     return count
+
 
 if __name__ == "__main__":
     assert(solution('4') == 2)
@@ -142,46 +128,3 @@ if __name__ == "__main__":
     assert(solution('1') == 0)
     assert(solution('2') == 1)
     print(solution('327402397402398470392740912374203947'))
-
-
-# def solution(n):
-#     n = int(n)
-#     count = 0
-#     num = 0
-#     step_list = []
-#     if n == 1:
-#         return 0
-#     while num != 1:
-#         if count == 0:
-#             num = n
-#         if num % 2 != 0:
-#             num = find_min_cost(num)
-#             count += 1
-#             step_list.append(num)
-#             continue
-#         num /= 2
-#         num = int(num)
-#         step_list.append(num)
-#         count += 1
-
-#     return count
-
-# def find_min_cost(num):
-#     add_count = calc(num + 1)
-#     sub_count = calc(num - 1)
-#     if add_count < sub_count:
-#         return num + 1
-#     return num - 1
-
-# def calc(num):
-#     count = 0
-#     while num != 1:
-#         count += 1
-#         if num % 2 != 0:
-#             num = find_min_cost(num)
-#             count += 1
-#             continue
-#         num /= 2
-#         num = int(num)
-
-#     return count
