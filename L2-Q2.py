@@ -151,7 +151,7 @@ if __name__ == "__main__":
     result = (int(a) - int(b))
     assert(convert_to_baseb(result, 4) == str(1002))
 
-# foobar:~/hey-i-already-did-that worm2031$ verify solution.py
+# foobar:~/hey-i-already-did-that verify solution.py
 # Verifying solution...
 # All test cases passed. Use submit solution.py to submit your solution
 # foobar:~/hey-i-already-did-that worm2031$ submit solution.py 
