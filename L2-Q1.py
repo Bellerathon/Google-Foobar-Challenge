@@ -141,7 +141,7 @@ if __name__ == "__main__":
     assert(solution([2]) == "2")
     assert(solution([-80]) == "-80")
     
-# foobar:~/power-hungry worm2031$ verify solution.py
+# foobar:~/power-hungry verify solution.py
 # Verifying solution...
 # All test cases passed. Use submit solution.py to submit your solution
 # foobar:~/power-hungry worm2031$ submit solution.py
