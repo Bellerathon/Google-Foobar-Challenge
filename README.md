@@ -14,6 +14,6 @@ Level 5: One Question — 22 days
 
 For every problem, you can either submit a solution written in Python (2.7) or Java.
 Before submitting, you can also validate your solution and run it against a suite of secret tests. 
-You aren’t told the test cases, though, only if your algorithm passes the test or not.
+You aren’t told the test cases, though, only if your algorithm passes the test or not. Must also adhere to time constraints.
 
 More info: https://betterprogramming.pub/google-has-a-secret-hiring-challenge-called-foobar-14625bfcea7a
