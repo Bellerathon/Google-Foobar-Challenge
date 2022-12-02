@@ -1,4 +1,4 @@
-# foobar:~/power-hungry worm2031$ cat readme.txt 
+# foobar:~/power-hungry cat readme.txt 
 # Power Hungry
 # ============
 
