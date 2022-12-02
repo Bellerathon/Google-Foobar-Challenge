@@ -55,7 +55,7 @@ def solution(s):
 
 # ========================================
 
-# foobar:~/the-cake-is-not-a-lie worm2031$ verify solution.py
+# foobar:~/the-cake-is-not-a-lie verify solution.py
 # Verifying solution...
 # All test cases passed. Use submit solution.py to submit your solution
 
