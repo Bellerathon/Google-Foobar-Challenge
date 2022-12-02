@@ -1,3 +1,5 @@
+# Google Foobar Challenge
+
 The Foobar Challenge is a coding challenge hosted by Google that can be completed in either Python or Java.
 
 Foobar is a semi-secret hiring challenge Google put out there to find talented developers via somewhat unconventional yet fitting means. 
