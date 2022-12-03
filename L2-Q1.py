@@ -144,7 +144,7 @@ if __name__ == "__main__":
 # foobar:~/power-hungry verify solution.py
 # Verifying solution...
 # All test cases passed. Use submit solution.py to submit your solution
-# foobar:~/power-hungry worm2031$ submit solution.py
+# foobar:~/power-hungry submit solution.py
 # Are you sure you want to submit your solution?
 # [Y]es or [N]o: Y
 # Submitting solution...
